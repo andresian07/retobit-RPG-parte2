@@ -1,4 +1,4 @@
-abstract class Character implements Combatant {
+public abstract class Character implements Combatant {
     // 🗒️ PROPIEDADES
     protected String name;
     protected int health;
@@ -18,6 +18,14 @@ abstract class Character implements Combatant {
             this.health = 0; // nos aseguramos de que no es negativo
             this.status = Status.DEAD;
         }
+    }
+
+    public void setStatus(Status newStatus) {
+        this.status = newStatus;
+    }
+
+    public void setCurrentHealth(int newHealth) {
+        this.health += newHealth;
     }
 
     @Override
